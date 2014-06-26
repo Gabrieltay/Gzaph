@@ -1,0 +1,17 @@
+@font-face {
+	font-family: 'husky'; /*a name to be used later*/
+	src: url('../fonts/huskystash.ttf'); /*URL to font*/
+}
+
+h1 {
+	text-align: center;
+	font-family: 'husky';
+}
+
+.navbar-brand {
+	font-size: 40px;
+	font-family: 'husky' !important;
+	background: -webkit-linear-gradient(#eee, #333);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}

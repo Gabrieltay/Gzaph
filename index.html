@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>GZaph</title>
+
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/gzaph.css" />
+		
+		<!-- JS -->
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script src="http://code.jquery.com/ui/1.11.0/jquery-ui.min.js"></script>
+
+		<script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('#fullpage').fullpage({
+					slidesColor : ['#1bbc9b', '#5CB85C', '#ccddff'],
+					sectionsColor : ['#1bbc9b', '#52ACCC', '#A0D468', '#F05656', '#465B74', '#333333'],
+					anchors : ['home', 'page1', 'page2', 'page3', 'page4', 'page5'],
+					menu : '#menu'
+				});
+			});
+		</script>
+
+		<style type="text/css">
+			input, textarea {
+				opacity: 0.8;
+			}
+			#navbar-collapse {
+				font-size: medium;
+			}
+			.section.table {
+				margin: 0 auto;
+			}
+			.controlArrow {
+				opacity: 0.5;
+			}
+			.controlArrow:hover {
+				opacity: 0.8;
+			}
+
+			@media (max-width: 768px) {
+				.container {
+					margin: 0 10px;
+				}
+				h1 {
+					font-size: 26px !important;
+				}
+				p, label {
+					font-size: 16px !important;
+				}
+			}
+
+			@media (min-width: 769px) and (max-width: 980px) {
+				h1 {
+					font-size: 34px !important;
+				}
+				p, label {
+					font-size: 20px !important;
+				}
+			}
+
+			@media (min-width: 981px) {
+				h1 {
+					/*font-size: 48px !important;*/
+					font-size: 20em !important;
+				}
+				p, label {
+					font-size: 24px !important;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<nav id="menu" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html">GZaph</a>
+				</div>
+
+				<div class="collapse navbar-collapse" id="navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li data-menuanchor="home" class="active">
+							<a href="#home">Home</a>
+						</li>
+
+						<li data-menuanchor="page1">
+							<a href="#page1">Page 1</a>
+						</li>
+
+						<li data-menuanchor="page2">
+							<a href="#page2">Page 2</a>
+						</li>
+
+						<li data-menuanchor="page3">
+							<a href="#page3">Page 3</a>
+						</li>
+
+						<li data-menuanchor="page4">
+							<a href="#page4">Page 4</a>
+						</li>
+						
+						<li data-menuanchor="page5">
+							<a href="#page5">Page 5</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<div id="fullpage">
+			<div class="section" id="section0">
+				<div class="container">
+					<h1>Home</h1>
+				</div>
+			</div>
+
+			<div class="section" id="section1">
+				<div class="slide">
+					<div class="container">
+						<div class="row">
+							<h1>Slide 1</h1>
+						</div>
+					</div>
+				</div>
+				
+				<div class="slide">
+					<div class="container">
+						<div class="row">
+							<h1>Slide 2</h1>
+						</div>
+					</div>
+				</div>
+				
+				<div class="slide">
+					<div class="container">
+						<div class="row">
+							<h1>Slide 3</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="section" id="section2">
+				<div class="container">
+					<h1>Page 2</h1>
+				</div>
+			</div>
+
+			<div class="section" id="section3">
+				<div class="container">
+					<h1>Page 3</h1>
+				</div>
+			</div>
+			
+			<div class="section" id="section4">
+				<div class="container">
+					<h1>Page 4</h1>
+				</div>
+			</div>
+			
+			<div class="section" id="section5">
+				<div class="container">
+					<h1>Page 5</h1>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	</body>
+</html>
