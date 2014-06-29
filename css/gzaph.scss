@@ -6,6 +6,11 @@
 }
 
 @font-face {
+  font-family: 'copal';
+  src: url('../fonts/CopalStd.otf');
+}
+
+@font-face {
   font-family: 'caviar';
   src: url('../fonts/CaviarDreams_Bold.ttf');
 }
@@ -24,14 +29,20 @@ body {
 }
 
 #fullpage {
-    .section .bg-content {
-        background-color: rgba(255, 255, 255, 0.5);
-        -webkit-border-radius: 7px;
-        -moz-border-radius: 7px;
-        border-radius: 7px;
-        padding: 20px;
-        width: 100%;
-        color: #333;
+    .section {
+        h1 {
+          /*font-size: 24em !important;*/
+        }
+      
+        .bg-content {
+          background-color: rgba(255, 255, 255, 0.5);
+          -webkit-border-radius: 7px;
+          -moz-border-radius: 7px;
+          border-radius: 7px;
+          padding: 20px;
+          width: 100%;
+          color: #333;
+        }
     }
       
     #section0 {
@@ -40,6 +51,10 @@ body {
     #section1 {
       .container {
         width: 90%;
+        
+        h1 {
+          font-family: 'copal';
+        }
       }
     }
     #section2 {
@@ -73,7 +88,5 @@ body {
 
 
 .section {
-  h1 {
-    font-size: 24em !important;
-  }
+  
 }

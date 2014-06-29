@@ -1,17 +1,21 @@
 $fontSize : 16px;
 $bp-s-1 : $fontSize;
 $bp-s-2 : $fontSize * 1.5;
+$bp-s-3 : $fontSize * 3;
 $bp-m-1 : $fontSize * 1.25;
 $bp-m-2 : $fontSize * 2;
+$bp-m-3 : $fontSize * 4;
 $bp-l-1 : $fontSize * 1.5;
 $bp-l-2 : $fontSize * 3;
+$bp-l-3 : $fontSize * 6;
 $bp-xl-1 : $fontSize * 1.75;
 $bp-xl-2 : $fontSize * 4;
+$bp-xl-3 : $fontSize * 8;
 
 /* Smartphones ----------- */
 @media (max-width: 768px) {
         h1 {
-          font-size: $bp-s-2 !important;
+          font-size: $bp-s-3 !important;
         }
         p, label {
           font-size: $bp-s-1 !important;
@@ -21,7 +25,7 @@ $bp-xl-2 : $fontSize * 4;
 /* Tablets ----------- */
 @media (min-width: 769px) and (max-width: 1024px) {
         h1 {
-          font-size: $bp-m-2 !important;
+          font-size: $bp-m-3 !important;
         }
         p, label {
           font-size: $bp-m-1 !important;
@@ -31,7 +35,7 @@ $bp-xl-2 : $fontSize * 4;
 /* Desktop ----------- */
 @media (min-width: 1024px) {
         h1 {
-          font-size: $bp-l-2 !important;
+          font-size: $bp-l-3 !important;
         }
         p, label {
           font-size: $bp-l-1 !important;
@@ -41,7 +45,7 @@ $bp-xl-2 : $fontSize * 4;
 /* Large Screen ----------- */
 @media (min-width: 1824px) {
         h1 {
-          font-size: $bp-xl-2 !important;
+          font-size: $bp-xl-3 !important;
         }
         p, label {
           font-size: $bp-xl-1 !important;

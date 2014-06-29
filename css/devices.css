@@ -1,7 +1,7 @@
 /* Smartphones ----------- */
 @media (max-width: 768px) {
   h1 {
-    font-size: 24px !important;
+    font-size: 48px !important;
   }
 
   p, label {
@@ -11,7 +11,7 @@
 /* Tablets ----------- */
 @media (min-width: 769px) and (max-width: 1024px) {
   h1 {
-    font-size: 32px !important;
+    font-size: 64px !important;
   }
 
   p, label {
@@ -21,7 +21,7 @@
 /* Desktop ----------- */
 @media (min-width: 1024px) {
   h1 {
-    font-size: 48px !important;
+    font-size: 96px !important;
   }
 
   p, label {
@@ -31,7 +31,7 @@
 /* Large Screen ----------- */
 @media (min-width: 1824px) {
   h1 {
-    font-size: 64px !important;
+    font-size: 128px !important;
   }
 
   p, label {

@@ -1,7 +1,7 @@
 /* Smartphones ----------- */
 @media (max-width: 768px) {
   h1 {
-    font-size: 24px !important;
+    font-size: 48px !important;
   }
 
   p, label {
@@ -11,7 +11,7 @@
 /* Tablets ----------- */
 @media (min-width: 769px) and (max-width: 1024px) {
   h1 {
-    font-size: 32px !important;
+    font-size: 64px !important;
   }
 
   p, label {
@@ -21,7 +21,7 @@
 /* Desktop ----------- */
 @media (min-width: 1024px) {
   h1 {
-    font-size: 48px !important;
+    font-size: 96px !important;
   }
 
   p, label {
@@ -31,7 +31,7 @@
 /* Large Screen ----------- */
 @media (min-width: 1824px) {
   h1 {
-    font-size: 64px !important;
+    font-size: 128px !important;
   }
 
   p, label {
@@ -45,6 +45,10 @@
   /*URL to font*/
 }
 @font-face {
+  font-family: 'copal';
+  src: url("../fonts/CopalStd.otf");
+}
+@font-face {
   font-family: 'caviar';
   src: url("../fonts/CaviarDreams_Bold.ttf");
 }
@@ -53,6 +57,9 @@ body h1 {
   font-family: 'husky';
 }
 
+#fullpage .section h1 {
+  /*font-size: 24em !important;*/
+}
 #fullpage .section .bg-content {
   background-color: rgba(255, 255, 255, 0.5);
   -webkit-border-radius: 7px;
@@ -64,6 +71,9 @@ body h1 {
 }
 #fullpage #section1 .container {
   width: 90%;
+}
+#fullpage #section1 .container h1 {
+  font-family: 'copal';
 }
 #fullpage #section2 .container {
   width: 100%;
@@ -80,8 +90,4 @@ body h1 {
 
 .nav a {
   font-family: 'caviar' !important;
-}
-
-.section h1 {
-  font-size: 24em !important;
 }
