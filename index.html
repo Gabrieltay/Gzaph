@@ -10,32 +10,56 @@
 		<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
 		<link rel="stylesheet" type="text/css" href="css/reset.css" />
 		<link rel="stylesheet" type="text/css" href="css/gzaph.css" />
+		<link rel="stylesheet" type="text/css" href="css/plusgallery.css">
 
 		<!-- JS -->
 		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 		<script src="http://code.jquery.com/ui/1.11.0/jquery-ui.min.js"></script>
 		<script src="galleria/galleria-1.3.6.min.js"></script>
+		<script src="galleria/plugins/flickr/galleria.flickr.min.js"></script>
+		<script type="text/javascript" src="js/plusgallery.js"></script>
 		<script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
+		<script type="text/javascript" src="js/gzaph.js"></script>
 
 		<script type="text/javascript">
 			$(document).ready(function() {
 				$('#fullpage').fullpage({
-					slidesColor : ['#1bbc9b', '#5CB85C', '#ccddff'],
-					sectionsColor : ['#1bbc9b', '#52ACCC', '#A0D468', '#F05656', '#465B74', '#333333'],
+					slidesColor : ['#1bbc9b', '#5CB85C', '#ccddff', 'A0D468'],
+					sectionsColor : ['#1bbc9b', '#52ACCC', '#222222', '#F05656', '#465B74', '#333333'],
 					anchors : ['home', 'page1', 'page2', 'page3', 'page4', 'page5'],
-					menu : '#menu'
+					menu : '#menu',
+					onLeave : function(index, direction) {
+						if (direction == 3) {
+							galleriaResize();
+						}
+					}
+				});
+
+				$(window).resize(function() {
+					galleriaResize();
 				});
 			});
 
 			Galleria.loadTheme('galleria/themes/classic/galleria.classic.min.js');
 			Galleria.configure({
-				transition: 'fade',
-				imageCrop: 'height',
-				lightbox : true
+				transition : 'fade',
+				swipe : 'disabled',
+				showInfo : false
 			});
 
-			Galleria.run('.galleria');
+			var flickr = new Galleria.Flickr();
+			flickr.setOptions({
+				max : 30,
+				imageSize : 'big',
+				thumbSize : 'thumb',
+				thumbnails : 'lazy',
+			}).user('belano', function(data) {
+				Galleria.run('.galleria', {
+					dataSource : data
+				});
+			});
 
+			$('#plusgallery').plusGallery();
 		</script>
 
 		<style type="text/css">
@@ -56,11 +80,16 @@
 			}
 			.galleria {
 				width: 100%;
-				height: 580px;
-				background: #000
+				height: 60px;
+				background-color: #222222 !important;
 			}
 			.galleria-container {
-				background-color: #A0D468;
+				background-color: #222222 !important;
+			}
+
+			#flickrlink img {
+				float: right;
+				height: 40px;
 			}
 
 		</style>
@@ -120,7 +149,23 @@
 				<div class="slide">
 					<div class="container">
 						<div class="row">
-							<h1>Slide 1</h1>
+							<div class="col-md-12 bg-content">
+								<h1>Slide 1</h1>
+								<p>
+									ProBowl Stats is a user-friendly application that helps to keep track of your bowling games at every practice or league games.
+
+									Ever played your best series but you don't remember when?
+									Do you remember your frames' score when you achieved your highest game?
+									How often did you get a strike or a spare for each game?
+
+									Compute detailed statistics of your games to monitor your progress and understand your strength/weakness.
+
+									Want to share your game play with your friends?
+									No problem, share your game scoresheet on popular social network platform.
+
+									No Advertisement and Free!
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -143,20 +188,36 @@
 			</div>
 
 			<div class="section" id="section2">
-				<div class="container">
-					<!--<h1>Page 2</h1>-->
-					<div class="galleria">
-						<img src="photo1.jpg">
-						<img src="photo2.jpg">
-						<img src="photo3.jpg">
+				<div class="container-fluid">
+					<div id="flickr-row" class="row">
+						<div class="col-sm-6">
+							<h2 class="log">My latest photos on Flickr</h2>
+						</div>
+						<div class="col-sm-6">
+							<a id="flickrlink" href="http://www.flickr.com/photos/belano/" title="See my photos on Flickr!" target="_blank"> <img src="images/flickrimg.png" alt=""> </a>
+						</div>
 					</div>
+					<div class="row">
 
+						<div class="galleria">
+							<!--
+							<img src="photo1.jpg">
+							<img src="photo2.jpg">
+							<img src="photo3.jpg">
+							-->
+						</div>
+					</div>
 				</div>
 			</div>
 
 			<div class="section" id="section3">
 				<div class="container">
-					<h1>Page 3</h1>
+					<div class="row">
+						<div id="plusgallery" data-api-key="e17e3c6f1fc452c18420545b0b3a6809" data-userid="belano" data-include="72157632194876418,72157632239701850,72157631853940024,72157632175125121" data-type="flickr"></div>
+						<div id="galleryinfo">
+							Photos loaded from <a href="http://www.flickr.com/photos/gsfc/sets/">NASA Goddard Photo and Video's Photosets</a>
+						</div>
+					</div>
 				</div>
 			</div>
 
@@ -168,7 +229,12 @@
 
 			<div class="section" id="section5">
 				<div class="container">
-					<h1>Page 5</h1>
+					<div class="row">
+						<div class="col-md-12 bg-content">
+							<h1>Page 5</h1>
+						</div>
+					</div>
+
 				</div>
 			</div>
 		</div>

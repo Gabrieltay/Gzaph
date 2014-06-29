@@ -5,6 +5,11 @@
   src: url('../fonts/huskystash.ttf'); /*URL to font*/
 }
 
+@font-face {
+  font-family: 'caviar';
+  src: url('../fonts/CaviarDreams_Bold.ttf');
+}
+
 @mixin gradient-fonts($lgrad, $ugrad){
   background: -webkit-linear-gradient($lgrad, $ugrad);
   -webkit-background-clip: text;
@@ -18,11 +23,52 @@ body {
     }
 }
 
+#fullpage {
+    .section .bg-content {
+        background-color: rgba(255, 255, 255, 0.5);
+        -webkit-border-radius: 7px;
+        -moz-border-radius: 7px;
+        border-radius: 7px;
+        padding: 20px;
+        width: 100%;
+        color: #333;
+    }
+      
+    #section0 {
+      
+    }
+    #section1 {
+      .container {
+        width: 90%;
+      }
+    }
+    #section2 {
+      .container {
+        width: 100%;
+      }
+    }
+    #section3 {
+
+    }
+    #section4 {
+      
+    }
+    #section5 {
+      
+    }
+}
+
 .navbar-brand {
   @include gradient-fonts(#EEEEEE, #333333);
   font-size: 40px;
   font-family: 'husky' !important;
   padding-top: 10px;
+}
+
+.nav {
+  a {
+    font-family: 'caviar' !important;
+  }
 }
 
 
