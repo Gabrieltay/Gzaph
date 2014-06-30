@@ -50,12 +50,16 @@ body {
       
     }
     #section1 {
-      .container {
+      .container-fluid {
         width: 90%;
         
         h1 {
           font-family: 'copal';
         }
+      .bg-content {
+         padding-top: 10px;
+         padding-bottom: 20px;
+       }
       }
     }
     #section2 {
@@ -87,7 +91,3 @@ body {
   }
 }
 
-
-.section {
-  
-}

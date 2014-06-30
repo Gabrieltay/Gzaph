@@ -1,4 +1,7 @@
 $fontSize : 16px;
+$bp-xs-1 : $fontSize * 0.7;
+$bp-xs-2 : $fontSize * 1;
+$bp-xs-3 : $fontSize * 2;
 $bp-s-1 : $fontSize;
 $bp-s-2 : $fontSize * 1.5;
 $bp-s-3 : $fontSize * 3;
@@ -11,14 +14,60 @@ $bp-l-3 : $fontSize * 6;
 $bp-xl-1 : $fontSize * 1.75;
 $bp-xl-2 : $fontSize * 4;
 $bp-xl-3 : $fontSize * 8;
-
+/* Smaller Smartphones ----------- */
+@media (max-width: 368px) {
+        h1 {
+          font-size: $bp-xs-3 !important;
+          color: #FFFFFF;
+        }
+        p, label {
+          font-size: $bp-xs-1 !important;
+        }
+        #probowl-img {
+        height: 30px;
+        padding-bottom: 10px;
+        visibility: hidden;
+        } 
+        .example-image-link img{
+          width:50px;
+        }
+        .androidBadge{
+          height: 40px;
+          width: 100px;
+        }
+        .iosBadge{
+          height: 40px;
+          width: 110px;
+        }
+        
+        .bg-content{
+          margin-top: 40px;
+        }
+}
 /* Smartphones ----------- */
-@media (max-width: 768px) {
+@media (min-width: 368px) and (max-width: 768px) {
         h1 {
           font-size: $bp-s-3 !important;
+          color: #993399;
         }
         p, label {
           font-size: $bp-s-1 !important;
+        }
+        #probowl-img {
+        height: 30px;
+        padding-bottom: 10px;
+        visibility: hidden;
+        }
+        .example-image-link img{
+          width:50px;
+        }
+        .androidBadge{
+          height: 40px;
+          width: 100px;
+        }
+        .iosBadge{
+          height: 40px;
+          width: 110px;
         }
 }
 
@@ -26,9 +75,18 @@ $bp-xl-3 : $fontSize * 8;
 @media (min-width: 769px) and (max-width: 1024px) {
         h1 {
           font-size: $bp-m-3 !important;
+          color: #CC3300;
         }
         p, label {
           font-size: $bp-m-1 !important;
+        }
+        #probowl-img {
+        height: 300px;
+        width: 100%;
+        padding-bottom: 30px;
+      }
+      .example-image-link img{
+          width:90px;
         }
 }
 
@@ -36,9 +94,18 @@ $bp-xl-3 : $fontSize * 8;
 @media (min-width: 1024px) {
         h1 {
           font-size: $bp-l-3 !important;
+          color: #336600;
         }
         p, label {
           font-size: $bp-l-1 !important;
+        }
+        #probowl-img {
+        height: 500px;;
+        width: 100%;
+        padding-bottom: 30px;
+      }
+      .example-image-link img{
+          width:90px;
         }
 }
 
@@ -46,8 +113,12 @@ $bp-xl-3 : $fontSize * 8;
 @media (min-width: 1824px) {
         h1 {
           font-size: $bp-xl-3 !important;
+          color: #000099;
         }
         p, label {
           font-size: $bp-xl-1 !important;
+        }
+        .example-image-link img{
+          width:150px;
         }
 }
