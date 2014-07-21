@@ -1,123 +1,63 @@
-/* Smaller Smartphones ----------- */
-@media (max-width: 368px) {
-  h1 {
-    font-size: 32px !important;
-    color: #FFFFFF;
-  }
-
-  p, label {
-    font-size: 11.2px !important;
-  }
-
-  #probowl-img {
-    height: 30px;
-    padding-bottom: 10px;
-    visibility: hidden;
-  }
-
-  .example-image-link img {
-    width: 50px;
-  }
-
-  .androidBadge {
-    height: 40px;
-    width: 100px;
-  }
-
-  .iosBadge {
-    height: 40px;
-    width: 110px;
-  }
-
-  .bg-content {
-    margin-top: 40px;
+/* Smartphones 320px width*/
+@media (max-width: 320px) {
+  #ipad-inner {
+    position: none;
+    top: 15%;
+    left: 15%;
+    right: 15%;
   }
 }
-/* Smartphones ----------- */
-@media (min-width: 368px) and (max-width: 768px) {
-  h1 {
-    font-size: 48px !important;
-    color: #993399;
-  }
-
-  p, label {
-    font-size: 16px !important;
-  }
-
-  #probowl-img {
-    height: 30px;
-    padding-bottom: 10px;
-    visibility: hidden;
-  }
-
-  .example-image-link img {
-    width: 50px;
-  }
-
-  .androidBadge {
-    height: 40px;
-    width: 100px;
-  }
-
-  .iosBadge {
-    height: 40px;
-    width: 110px;
+/* Smartphones 320px - 480px width*/
+@media (min-width: 320px) and (max-width: 480px) {
+  #ipad-inner {
+    position: none;
+    top: 15%;
+    left: 15%;
+    right: 15%;
   }
 }
-/* Tablets ----------- */
-@media (min-width: 769px) and (max-width: 1024px) {
-  h1 {
-    font-size: 64px !important;
-    color: #CC3300;
+/* Smartphones 320px - 480px width*/
+@media (min-width: 480px) and (max-width: 548px) {
+  #ipad-inner {
+    position: none;
+    top: 15%;
+    left: 15%;
+    right: 15%;
   }
-
-  p, label {
-    font-size: 20px !important;
+}
+/* Smartphones 548px - 480px width*/
+@media (min-width: 548px) and (max-width: 768px) {
+  #ipad-inner {
+    position: none;
+    top: 15%;
+    left: 15%;
+    right: 15%;
   }
-
-  #probowl-img {
-    height: 300px;
-    width: 100%;
-    padding-bottom: 30px;
-  }
-
-  .example-image-link img {
-    width: 90px;
+}
+/* Tablet 768px - 1024px width*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  #ipad-inner {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    right: 15%;
   }
 }
 /* Desktop ----------- */
 @media (min-width: 1024px) {
-  h1 {
-    font-size: 96px !important;
-    color: #336600;
-  }
-
-  p, label {
-    font-size: 24px !important;
-  }
-
-  #probowl-img {
-    height: 500px;
-    width: 100%;
-    padding-bottom: 30px;
-  }
-
-  .example-image-link img {
-    width: 90px;
+  #ipad-inner {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    right: 15%;
   }
 }
-/* Large Screen ----------- */
+/* Large Desktop ----------- */
 @media (min-width: 1824px) {
-  h1 {
-    font-size: 128px !important;
-    color: #000099;
-  }
-
-  p, label {
-    font-size: 28px !important;
-  }
-
-  .example-image-link img {
-    width: 150px;
+  #ipad-inner {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    right: 15%;
   }
 }

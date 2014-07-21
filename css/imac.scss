@@ -1,0 +1,49 @@
+/* Smaller Screen ----------- */
+@media (min-width: 320px) {
+  .imac-inner { 
+    position: absolute;
+    top: 6%;
+    left: 7%;
+    right: 7%;  
+  }
+}
+
+/* Small Screen ----------- */
+@media (min-width: 468px) {
+  .imac-inner { 
+    position: absolute;
+    top: 6%;
+    left: 6%;
+    right: 6%;  
+  }
+}
+
+/* Medium Screen ----------- */
+@media (min-width: 568px) {
+  .imac-inner { 
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    right: 5%;  
+  }
+}
+
+/* Large Screen ----------- */
+@media (min-width: 992px) {
+  .imac-inner { 
+    position: absolute;
+    top: 48px;
+    left: 54px;
+    right: 54px;
+  }
+}
+
+/* Larger Screen ----------- */
+@media (min-width: 1200px) {
+  .imac-inner { 
+    position: absolute;
+    top: 52px;
+    left: 58px;
+    right: 58px;
+  }
+}

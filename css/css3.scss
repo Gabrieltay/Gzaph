@@ -1,0 +1,43 @@
+@mixin transition($property)
+{
+  -webkit-transition: $property;
+  -moz-transition: $property;
+  -o-transition: $property;
+  transition: $property;
+}
+
+@mixin transition-duration($property)
+{
+  -webkit-transition-duration: $property;
+     -moz-transition-duration: $property;
+      -ms-transition-duration: $property;
+       -o-transition-duration: $property;
+          transition-duration: $property;
+}
+
+@mixin transition-property($property)
+{
+  -webkit-transition-property: $property;
+     -moz-transition-property: $property;
+      -ms-transition-property: $property;
+       -o-transition-property: $property;
+          transition-property: $property;
+}
+
+@mixin transform($property)
+{
+  -webkit-transform: $property;
+  -moz-transform: $property;
+  -o-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+
+@mixin border-radius($property)
+{
+  -webkit-border-radius: $property;
+  -moz-border-radius: $property;
+  border-radius: $property; 
+}
+
+
