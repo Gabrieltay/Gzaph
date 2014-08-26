@@ -7,471 +7,546 @@
 		<!-- CSS -->
 		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
 		<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
-		<link href="css/animate.min.css" rel="stylesheet" type="text/css">
-		<link href="css/supersized.css" rel="stylesheet" type="text/css">
-		<link href="css/supersized.shutter.css" rel="stylesheet" type="text/css">
 		<link href="css/jquery.fancybox.css" rel="stylesheet" type="text/css">
 		<link href="css/jquery.fancybox-buttons.css" rel="stylesheet" type="text/css">
-		<link href="css/vertical-carousel.css" rel="stylesheet" type="text/css">
+		<link href="css/animate.min.css" rel="stylesheet" type="text/css">
 		<link href="css/custom.css" rel="stylesheet" type="text/css">
+
 		<!-- JS -->
 		<script src="js/jquery-2.0.3.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		<script src="js/waypoints.js"></script>
-		<script src="js/jquery.isotope.js"></script>
-		<!--
-		<script src="js/isotope.pkgd.min.js"></script>
-		<script src="js/imagesloaded.pkgd.js"></script>
-		-->
 		<script src="js/jquery.fancybox.pack.js"></script>
 		<script src="js/jquery.fancybox-buttons.js"></script>
-		<script src="js/supersized.3.2.7.js"></script>
-		<script src="js/supersized.shutter.js"></script>
-
 		<script src="js/custom.js"></script>
 		<style>
-			#secret {
-				display: none;
+			section {
+				padding-top: 80px;
+				padding-bottom: 100px;
+			}
+			.carousel-section #carousel-example-generic {
+				/*background-color: #DE5E60;*/
+				display: block;
+				width: 100%;
+				margin-top: 50px !important;
 			}
 
-			.macbook-inner {
-				position: absolute;
-				top: 60px;
-				left: 163px;
-				right: 163px;
-				padding: 0px 30px;
-			}
-			.row div {
-				border: 0px solid black;
-			}
-			.form-control {
-				margin-bottom: 2%;
-				height: 56px;
+			.carousel-section .row {
+				display: block;
+				height: 120% !important;
+				padding-top: 20px !important;
+				padding-bottom: 20px !important;
+				vertical-align: middle !important;
+				border: 0px solid black !important;
 			}
 
-			textarea.form-control {
-				height: 70px;
+			.carousel-section .icon {
+
+				border-radius: 10%;
 			}
 
-			.scrollpoint {
-				opacity: 0;
+			.carousel-section .carousel-control {
+				top: 50%;
+				width: 40px;
+				height: 40px;
+				padding-top: 5px;
 			}
 
-			.scrollpoint.active {
-				opacity: 1;
+			.small-icon {
+				width: 100%;
+				border-radius: 10%;swoosh javascript
 			}
 
-			.animated {
-				-webkit-transition-duration: 1s;
+			.store-icon {
+				width: 100%;
 			}
 
+			.vcenter {
+				float: none !important;
+				display: table-cell !important;
+				vertical-align: middle !important;
+			}
+
+			.float-right {
+				float: right;
+			}
+
+			.float-left {
+				float: left;
+			}
+			.carousel-section {
+				background-color: #DE5E60;
+			}
+			#probowl-page {
+				background-color: #38BEEA !important;
+			}
+
+			#twenty4-page {
+				background-color: #65E0C1
+			}
+
+			#ippt-page {
+				background-color: #F3C500
+			}
+			.ss-image {
+				height: 258px !important;
+			}
+
+			.ss-list {
+				list-style-type: none;
+				display: inline-block;
+			}
+
+			div {
+				border: 0px solid black !important;
+			}
 		</style>
-		<script></script>
+
+		<script type="text/javascript" >
+			$(document).ready(function() {
+				$('.carousel').carousel()
+			});
+		</script>
 	</head>
 
-	<body id="top" data-spy="scroll" data-target="#myNavigation" data-offset="300">
-		<a id="scrolltop" class="scroll" href="#top"> <i class="fa fa-angle-up"></i> </a>
-		<!-- Homepage Slider -->
-		<div id="home-slider">
-			<div class="overlay">
-
-			</div>
-
-			<div class="container">
-				<div class="row upper-row">
-					<div class="col-xs-12">
-						<img src="images/jonathan.png" class="gz-center img-responsive scrollpoint fdown">
-						<h2 class="animated zoomIn">Lorem Ipsum</h2>
-					</div>
-				</div>
-				<div class="row caption-row">
-					<div class="col-xs-12">
-						<div class="slider-text">
-							<div id="slidecaption"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="control-nav">
-				<a id="prevslide" class="load-item"><i class="fa fa-angle-left"></i></a>
-				<a id="nextslide" class="load-item"><i class="fa fa-angle-right"></i></a>
-				<ul id="slide-list"></ul>
-				<a id="nextsection" class="scroll" href="#page1"><i class="fa fa-angle-down"></i></a>
-			</div>
-		</div>
-		<!-- End Homepage Slider -->
+	<body>
 		<header>
+
 			<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 				<div class="container">
 					<div class="navbar-header">
 						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavigation">
 							<i class="fa fa-bars"></i>
 						</button>
-						<img src="images/jonathan.png" class="navbar-logo pull-left">
-						<a href="index.html" class="navbar-brand">Home</a>
+						<a href="index.html" class="navbar-brand">Gzaph</a>
 					</div>
 
 					<div class="collapse navbar-collapse" id="myNavigation">
 						<ul class="nav navbar-nav navbar-right animated fadeInDown">
-							<li>
-								<a href="#page1" class="scroll">Page 1</a>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Mobile Apps <span class="caret"></span></a>
+								<ul class="dropdown-menu" role="menu">
+									<li>
+										<a href="#probowl-page">ProBowl</a>
+									</li>
+									<li>
+										<a href="#twenty4-page">Twenty4</a>
+									</li>
+									<li>
+										<a href="#ippt-page">IPPT Calculator</a>
+									</li>
+								</ul>
 							</li>
 							<li>
-								<a href="#page2" class="scroll">Page 2</a>
+								<a href="#page2" class="scroll">About Me</a>
 							</li>
 							<li>
-								<a href="#page3" class="scroll">Page 3</a>
-							</li>
-							<li>
-								<a href="#page4" class="scroll">Page 4</a>
-							</li>
-							<li>
-								<a href="#page5" class="scroll">Page 5</a>
-							</li>
-							<li>
-								<a href="#page6" class="scroll">Page 6</a>
+								<a href="#page3" class="scroll">Contact Me</a>
 							</li>
 						</ul>
 						</li>
 
-						<!--
-						<li>
-						<a href="#footer" class="scroll">Footer</a>
-						</li>
-						-->
 						</ul>
 					</div>
 				</div>
 			</nav>
-
-			<!--
-			<div class="jumbotron">
-			<img src="images/jonathan.png" class="gz-center img-responsive scrollpoint fdown">
-			<h2 class="animated zoomIn">Lorem Ipsum</h2>
-			</div>-->
 		</header>
+		<section class="carousel-section">
+			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" >
+				<!-- Indicators -->
+				<ol class="carousel-indicators">
+					<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+				</ol>
 
-		<section id="page1" class="gz-center page background-first">
-			<div class="container">
-				<h2 class="scrollpoint fdown">Lorem Ipsum</h2>
-				<div class="row">
-					<div class="col-md-4 scrollpoint fleft">
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed volutpat est. Donec lobortis interdum volutpat. Maecenas bibendum dui quis pharetra tincidunt. Praesent posuere eu velit at scelerisque.
-						</p>
-					</div>
-					<div class="col-md-4 scrollpoint fdown">
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed volutpat est. Donec lobortis interdum volutpat. Maecenas bibendum dui quis pharetra tincidunt. Praesent posuere eu velit at scelerisque.
-						</p>
-					</div>
-					<div class="col-md-4 scrollpoint fright">
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed volutpat est. Donec lobortis interdum volutpat. Maecenas bibendum dui quis pharetra tincidunt. Praesent posuere eu velit at scelerisque.
-						</p>
-					</div>
-
-					<div class="col-md-4 scrollpoint fleft">
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed volutpat est. Donec lobortis interdum volutpat. Maecenas bibendum dui quis pharetra tincidunt. Praesent posuere eu velit at scelerisque.
-						</p>
-					</div>
-					<div class="col-md-4 scrollpoint fdown">
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed volutpat est. Donec lobortis interdum volutpat. Maecenas bibendum dui quis pharetra tincidunt. Praesent posuere eu velit at scelerisque.
-						</p>
-					</div>
-					<div class="col-md-4 scrollpoint fright">
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed volutpat est. Donec lobortis interdum volutpat. Maecenas bibendum dui quis pharetra tincidunt. Praesent posuere eu velit at scelerisque.
-						</p>
-					</div>
-
-				</div>
-			</div>
-		</section>
-
-		<section id="page2" class="gz-center page background-second">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 scrollpoint zin">
-						<h2 class="gz-center">Lorem Ipsum</h2>
-					</div>
-					<div class="col-md-3 scrollpoint fleft">
-						<img class="gz-center" src="images/ico1.png">
-						<h3 class="">Item 1</h3>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed volutpat est. Donec lobortis interdum volutpat. Maecenas bibendum dui quis pharetra tincidunt. Praesent posuere eu velit at scelerisque.
-						</p>
-					</div>
-					<div class="col-md-3 scrollpoint fleft">
-						<img class="gz-center" src="images/ico1.png">
-						<h3 class="">Item 2</h3>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed volutpat est. Donec lobortis interdum volutpat. Maecenas bibendum dui quis pharetra tincidunt. Praesent posuere eu velit at scelerisque.
-						</p>
-					</div>
-					<div class="col-md-3 scrollpoint fright">
-						<img class="gz-center" src="images/ico1.png">
-						<h3 class="">Item 3</h3>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed volutpat est. Donec lobortis interdum volutpat. Maecenas bibendum dui quis pharetra tincidunt. Praesent posuere eu velit at scelerisque.
-						</p>
-					</div>
-					<div class="col-md-3 scrollpoint fright">
-						<img class="gz-center" src="images/ico1.png">
-						<h3 class="">Item 4</h3>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed volutpat est. Donec lobortis interdum volutpat. Maecenas bibendum dui quis pharetra tincidunt. Praesent posuere eu velit at scelerisque.
-						</p>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section id="page3" class="gz-center page background-first">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 scrollpoint finX">
-						<a id="secret-toggle" class="btn btn-primary"><i class="fa fa-arrow-circle-o-down"></i> Secret </a>
-					</div>
-				</div>
-			</div>
-			<div id="secret">
-				<div class="container">
-					<div class="row">
-						<!-- Toogle my skills start -->
-						<div class="col-md-6 scrollpoint fleft">
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed volutpat est. Donec lobortis interdum volutpat. Maecenas bibendum dui quis pharetra tincidunt. Praesent posuere eu velit at scelerisque.
-							</p>
-						</div>
-						<div class="col-md-6 scrollpoint fright">
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed volutpat est. Donec lobortis interdum volutpat. Maecenas bibendum dui quis pharetra tincidunt. Praesent posuere eu velit at scelerisque.
-							</p>
-						</div>
-					</div><!-- Toogle my skills end-->
-
-				</div><!-- Container end-->
-			</div>
-		</section>
-
-		<section id="page4" class="gz-center page background-second">
-			<div class="container">
-				<div class="row">
-					<h2>iMac 16:9</h2>
-				</div>
-				<div class="row">
-					<div class="col-lg-12 scrollpoint fleft">
-						<img src="images/imac.png" class="img-responsive" alt="">
-						<div id="carousel-reference" class="carousel slide imac-inner" data-ride="carousel">
-							<!-- Wrapper for slides -->
-							<div class="carousel-inner">
-								<div class="item active"><img src="images/wp.jpg" alt="">
-								</div>
-								<div class="item"><img src="images/wp2.jpg" alt="">
-								</div>
-								<div class="item"><img src="images/image_02.png" alt="">
-								</div>
-							</div>
-
-							<!-- Controls -->
-							<a class="left carousel-control" href="#carousel-reference" data-slide="prev" style="display: none;"><i class="fa fa-arrow-left"></i></a>
-							<a class="right carousel-control" href="#carousel-reference" data-slide="next" style="display: none;"><i class="fa fa-arrow-right"></i></a>
-						</div>
-					</div>
-					<div class="col-lg-6"></div>
-				</div>
-			</div>
-		</section>
-
-		<section id="page5" class="gz-center page background-first">
-			<div class="container">
-				<h2 class="">Contact me</h2>
-				<div class="row">
-					<div class="col-sm-12 scrollpoint fright">
-						<img src="images/ipad2.png" class="img-responsive hidden-xs" alt="">
-						<div id="ipad-inner">
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner">
+					<div class="item active">
+						<div class="container">
 							<div class="row">
-								<div class="col-sm-12">
-									<fieldset>
-										<div class="form-group">
-											<label for="firstname" class="sr-only">First Name</label>
-											<input type="text" class="form-control" placeholder="First Name" id="firstname">
-										</div>
-
-										<div class="form-group">
-											<label for="lastname" class="sr-only">Last Name</label>
-											<input type="text" class="form-control" placeholder="Last Name" id="lastname">
-										</div>
-
-										<div class="form-group">
-											<label for="email" class="sr-only">Email</label>
-											<input type="email" class="form-control" placeholder="Email" id="email">
-										</div>
-
-										<div class="form-group">
-											<label for="message" class="sr-only">Message</label>
-											<textarea class="form-control" placeholder="Message" id="message"></textarea>
-										</div>
-
-										<button class="btn btn-primary">
-											Send message
-										</button>
-
-									</fieldset>
-									</form>
+								<a href="#probowl-page">
+								<div class="vcenter col-xs-4">
+									<img class="icon img-responsive" src="images/icon01.png">
 								</div>
+								<div class="vcenter col-xs-6">
+									<h1>ProBowl</h1>
+								</div>
+							</div>
+							</a>
+							<div class="carousel-caption"></div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="container">
+							<div class="row">
+								<a href="#twenty4-page">
+								<div class="vcenter col-xs-4">
+									<img class="icon img-responsive" src="images/icon02.png">
+								</div>
+								<div class="vcenter col-xs-6">
+									<h1>Twenty4</h1>
+								</div> </a>
+								<div class="carousel-caption"></div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="container">
+							<div class="row">
+								<a href="#ippt-page">
+								<div class="vcenter col-xs-4">
+									<img class="icon img-responsive" src="images/icon03.png">
+								</div>
+								<div class="vcenter col-xs-6">
+									<h1>IPPT Calculator</h1>
+								</div> </a>
+								<div class="carousel-caption"></div>
 							</div>
 						</div>
 					</div>
 				</div>
+				<!-- Controls -->
+				<a class="left carousel-control" href="#carousel-example-generic"  data-slide="prev"> <i class="fa fa-arrow-left"></i> </a>
+				<a class="right carousel-control" href="#carousel-example-generic"  data-slide="next"> <i class="fa fa-arrow-right"></i> </a>
 			</div>
 		</section>
 
-		<section id="page6" class="gz-center page background-second">
+		<section id="probowl-page">
 			<div class="container">
-
-				<div class="carousel slide vertical scrollpoint fdown" data-ride="carousel">
-					<div class="carousel-inner">
-						<div class="item active">
-							<h1>I <i class="fa fa-heart icon-first"></i> Hello World</h1>
-						</div>
-						<div class="item">
-							<h1>Bootstrap Theme <i class="fa fa-code icon"></i></h1>
-						</div>
-						<div class="item">
-							<h1><i class="fa fa-trophy"></i> Everyday is Awesome!</h1>
-						</div>
-					</div>
-				</div>
+				<h1>ProBowl Stats</h1>
 				<div class="row">
-					<div class="col-xs-10 col-xs-offset-1 scrollpoint fup">
-						<div class="quotes">
-							<div class="pull-left">
-								<i class="fa fa-quote-left"></i>
-							</div>
-							<div class="carousel slide" data-ride="carousel">
-								<div class="carousel-inner">
-									<div class="item active">
-										<p>
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-										</p>
-									</div>
-									<div class="item">
-										<p>
-											Praesent sed volutpat est. Donec lobortis interdum volutpat.
-										</p>
-									</div>
-									<div class="item">
-										<p>
-											Maecenas bibendum dui quis pharetra tincidunt.
-										</p>
-									</div>
-									<div class="item">
-										<p>
-											Praesent posuere eu velit at scelerisque.
-										</p>
-									</div>
-								</div>
-							</div>
-							<div class="pull-right">
-								<i class="fa fa-quote-right"></i>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section id="page7" class="gz-center page background-first">
-			<div class="container">
-				<div class="row">
-					<nav id="gallery-nav">
-						<ul id="filters">
-							<li class="categories">
-								Categories
-							</li>
-							<li>
-								<a data-filter="*">Show All</a>
-							</li>
-							<li>
-								<a data-filter=".landscape">Landscape</a>
-							</li>
-							<li>
-								<a data-filter=".portrait">Portrait</a>
-							</li>
-						</ul>
-					</nav>
-				</div
-				<div class="row">
-					<div class="isotope">
+					<div class="col-md-3">
 						<div class="row">
-							<div class="filter-item col-sm-6 col-md-3 landscape" data-category="landscape">
-								<a class="overlay-wrapper fancybox" rel="gallery" title="The City" href="images/work/full/image-01-full.jpg"><span class="overlay"></span><i class="fa fa-search-plus"></i></a>
-								<img src="images/work/thumbs/image-01.jpg" alt="hello world">
+							<div class="col-md-12">
+								<img class="small-icon" src="images/icon01.png">
+								<br>
+								<br>
 							</div>
-							<div class="filter-item col-sm-6 col-md-3 portrait" data-category="portrait">
-								<a class="overlay-wrapper fancybox" rel="gallery" title="The City" href="images/work/full/image-02-full.jpg"><span class="overlay"></span><i class="fa fa-search-plus"></i></a>
-								<img src="images/work/thumbs/image-02.jpg">
+
+							<div class="col-md-12" block>
+								<label class="float-right">Version 1.1.4</label>
 							</div>
-							<div class="filter-item col-sm-6 col-md-3 landscape" data-category="landscape">
-								<a class="overlay-wrapper fancybox" rel="gallery" title="The City" href="images/work/full/image-03-full.jpg"><span class="overlay"></span><i class="fa fa-search-plus"></i></a>
-								<img src="images/work/thumbs/image-03.jpg">
+							<div class="col-md-12" block>
+								<label class="float-right">Category: Sports</label>
 							</div>
-							<div class="filter-item col-sm-6 col-md-3 portrait" data-category="portrait">
-								<a class="overlay-wrapper fancybox" rel="gallery" title="The City" href="images/work/full/image-04-full.jpg"><span class="overlay"></span><i class="fa fa-search-plus"></i></a>
-								<img src="images/work/thumbs/image-04.jpg">
+							<div class="col-md-12" block>
+								<label class="float-right">Released: Jul 02, 2014</label>
 							</div>
-							<div class="filter-item col-sm-6 col-md-3 landscape" data-category="landscape">
-								<a class="overlay-wrapper fancybox" rel="gallery" title="The City" href="images/work/full/image-05-full.jpg"><span class="overlay"></span><i class="fa fa-search-plus"></i></a>
-								<img src="images/work/thumbs/image-05.jpg">
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-md-12">
+								<a href="https://itunes.apple.com/us/app/probowl-stats/id890134051" target="_blank"> <img class="store-icon" src="images/appstore.svg"> </a>
 							</div>
-							<div class="filter-item col-sm-6 col-md-3 portrait" data-category="portrait">
-								<a class="overlay-wrapper fancybox" rel="gallery" title="The City" href="images/work/full/image-06-full.jpg"><span class="overlay"></span><i class="fa fa-search-plus"></i></a>
-								<img src="images/work/thumbs/image-06.jpg">
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-md-12">
+								<a href="https://play.google.com/store/apps/details?id=com.gabmobi.BowlingStats" target="_blank"><img class="store-icon" src="images/playstore.svg"></a>
 							</div>
-							<div class="filter-item col-sm-6 col-md-3 landscape" data-category="landscape">
-								<a class="overlay-wrapper fancybox" rel="gallery" title="The City" href="images/work/full/image-07-full.jpg"><span class="overlay"></span><i class="fa fa-search-plus"></i></a>
-								<img src="images/work/thumbs/image-07.jpg">
+						</div>
+					</div>
+					<div class="col-md-9">
+						<div class="row">
+							<div class="col-md-12">
+								<h3>Description</h3>
+								<p>
+									ProBowl Stats is a user-friendly application that helps to keep track of your bowling games at every practice or league games.
+									<br>
+									<br>
+									Ever played your best series but you don't remember when?
+									<br>
+									Do you remember your frames' score when you achieved your highest game?
+									<br>
+									How often did you get a strike or a spare for each game?
+									<br>
+									<br>
+									Compute detailed statistics of your games to monitor your progress and understand your strength/weakness.
+									<br>
+									<br>
+									Want to share your game play with your friends?
+									<br>
+									No problem, share your game scoresheet on popular social network platform.
+
+									2 ways of entering your game scores.
+									<br>
+									- Entry of every frame's pins fall
+									<br>
+									- Or just enter your score after each game
+								</p>
 							</div>
-							<div class="filter-item col-sm-6 col-md-3 portrait" data-category="portrait">
-								<a class="overlay-wrapper fancybox" rel="gallery" title="The City" href="images/work/full/image-08-full.jpg"><span class="overlay"></span><i class="fa fa-search-plus"></i></a>
-								<img src="images/work/thumbs/image-08.jpg">
+						</div>
+
+						<div class="row">
+							<div class="col-md-12">
+								<h3>Screenshots</h3>
 							</div>
-							<div class="filter-item col-sm-6 col-md-3 landscape" data-category="landscape">
-								<a class="overlay-wrapper fancybox" rel="gallery" title="The City" href="images/work/full/image-09-full.jpg"><span class="overlay"></span><i class="fa fa-search-plus"></i></a>
-								<img src="images/work/thumbs/image-09.jpg">
+							<div class="col-md-12">
+								<ul class="ss-wrapper">
+									<li class="ss-list">
+										<a href="images/screenshots/pb1.png"><img class="ss-image" src="images/screenshots/pb1.png"></a>
+									</li>
+									<li class="ss-list">
+										<a href="images/screenshots/pb2.png"><img class="ss-image" src="images/screenshots/pb2.png"></a>
+									</li>
+									<li class="ss-list">
+										<a href="images/screenshots/pb3.png"><img class="ss-image" src="images/screenshots/pb3.png"></a>
+									</li>
+									<li class="ss-list">
+										<a href="images/screenshots/pb4.png"><img class="ss-image" src="images/screenshots/pb4.png"></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-12">
+								<h3>Reviews</h3>
+							</div>
+							<div class="col-md-12">
+								<div class="quotes">
+									<i class="float-left fa fa-quote-left"></i>
+									<div class="carousel slide" data-ride="carousel">
+										<div class="carousel-inner">
+											<div class="item active">
+												<p>
+													<b>Simplicity is good</b>
+													<br>
+													5 stars for no Ads. Keying in score is easy. UI can be improved.
+												</p>
+											</div>
+											<div class="item">
+												<p>
+													<b>Cool & fun! Super cool app!</b> I can now record my games without hassle and share with friends too! Awesome.
+												</p>
+											</div>
+											<div class="item">
+												<p>
+													<b>Good but room for improvement</b> No ads definitely is a plus for this apps.. Allows you to see the score of every frame is a plus as well... Will worth 5 stars if able to show what are the pins that you have hit or missed...
+												</p>
+											</div>
+										</div>
+									</div>
+									<i class="float-right fa fa-quote-right"></i>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+			</div>
 		</section>
 
-		<section id="footer" class="gz-center page background-first">
+		<section id="twenty4-page">
 			<div class="container">
+				<h1>Twenty4</h1>
 				<div class="row">
+					<div class="col-md-3">
+						<div class="row">
+							<div class="col-md-12">
+								<img class="small-icon" src="images/icon02.png">
+								<br>
+								<br>
+							</div>
 
-					<ul class="social-inline scrollpoint fbottom">
-						<li>
-							<a href="#"><i class="fa fa-facebook-square"></i></a>
-						</li>
-						<li>
-							<a href="#"><i class="fa fa-twitter-square"></i></a>
-						</li>
-						<li>
-							<a href="#"><i class="fa fa-google-plus-square"></i></a>
-						</li>
-						<li>
-							<a href="#"><i class="fa fa-flickr"></i></a>
-						</li>
-					</ul>
-					<p>
-						© Gzaph 2014
-					</p>
+							<div class="col-md-12" block>
+								<label class="float-right">Version 1.0.0</label>
+							</div>
+							<div class="col-md-12" block>
+								<label class="float-right">Category: Games</label>
+							</div>
+							<div class="col-md-12" block>
+								<label class="float-right">Released: Jul 27, 2014</label>
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-md-12">
+								<a href="https://itunes.apple.com/us/app/twenty4/id900097186" target="_blank"> <img class="store-icon" src="images/appstore.svg"> </a>
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-md-12">
+								<a href="https://play.google.com/store/apps/details?id=com.gzaph.cal24game" target="_blank"><img class="store-icon" src="images/playstore.svg"></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-9">
+						<div class="row">
+							<div class="col-md-12">
+								<h3>Description</h3>
+								<p>
+									Challenge yourself in this simple mathematics game.
+									<br>
+									<br>
+									How to play?
+									<br>
+									Do you remember your frames' score when you achieved your highest game?
+									<br>
+									In each puzzle, there are 4 random numbers. Use basic mathematical operations (+, -, x, /) on all 4 numbers to achieve a result of '24'. Each number can only be used once.
+									<br>
+									Solve as many puzzles within 5 minutes.
+									<br>
+									All the puzzles are solvable!
+								</p>
+							</div>
+						</div>
 
+						<div class="row">
+							<div class="col-md-12">
+								<h3>Screenshots</h3>
+							</div>
+							<div class="col-md-12">
+								<ul class="ss-wrapper">
+									<li class="ss-list">
+										<a href="images/screenshots/tf1.png"><img class="ss-image" src="images/screenshots/tf1.png"></a>
+									</li>
+									<li class="ss-list">
+										<a href="images/screenshots/tf2.png"><img class="ss-image" src="images/screenshots/tf2.png"></a>
+									</li>
+									<li class="ss-list">
+										<a href="images/screenshots/tf3.png"><img class="ss-image" src="images/screenshots/tf3.png"></a>
+									</li>
+									<li class="ss-list">
+										<a href="images/screenshots/tf4.png"><img class="ss-image" src="images/screenshots/tf4.png"></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-12">
+								<h3>Reviews</h3>
+							</div>
+							<div class="col-md-12">
+								<div class="quotes">
+									<i class="float-left fa fa-quote-left"></i>
+									<div class="carousel slide" data-ride="carousel">
+										<div class="carousel-inner">
+											<div class="item active">
+												<p>
+													<b>I love this game! ♥️ </b>
+													<br>
+													This game is based on the card game "24" which I used to play in middle school. This game makes you think unlike other games out there. Thanks!
+												</p>
+											</div>
+											<div class="item">
+												<p>
+													Challenging game! Keep the mind actively working
+												</p>
+											</div>
+											<div class="item">
+												<p>
+													<b>Interesting game!</b>
+												</p>
+											</div>
+
+										</div>
+									</div>
+									<i class="float-right fa fa-quote-right"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="ippt-page">
+			<div class="container">
+				<h1>IPPT Calculator</h1>
+				<div class="row">
+					<div class="col-md-3">
+						<div class="row">
+							<div class="col-md-12">
+								<img class="small-icon" src="images/icon03.png">
+								<br>
+								<br>
+							</div>
+
+							<div class="col-md-12" block>
+								<label class="float-right">Version 1.0.2</label>
+							</div>
+							<div class="col-md-12" block>
+								<label class="float-right">Category: Utilities</label>
+							</div>
+							<div class="col-md-12" block>
+								<label class="float-right">Released: Aug 9, 2014</label>
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-md-12">
+								<a href="#" target="_blank"> <img class="store-icon" src="images/appstore.svg"> </a>
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-md-12">
+								<a href="https://play.google.com/store/apps/details?id=com.gzaph.ippt" target="_blank"><img class="store-icon" src="images/playstore.svg"></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-9">
+						<div class="row">
+							<div class="col-md-12">
+								<h3>Description</h3>
+								<p>
+									IPPT Calculator is an app that helps you to calculate your scores/points in this new IPPT scoring system.
+									<br>
+									<br>
+									With this app, you are able to
+									<br>
+									1) Determine the number of push-ups, sit-ups and 2.4Km timing to achieve the points
+									<br>
+									2) Determine the points achieved by the number of push-ups, sit-ups and 2.4Km timing.
+									<br>
+									3) Set your target award and set the respective goals for individual station.
+									<br>
+									4) Overview of scoring system based on your age.
+								</p>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-12">
+								<h3>Screenshots</h3>
+							</div>
+							<div class="col-md-12">
+								<ul class="ss-wrapper">
+									<li class="ss-list">
+										<a href="images/screenshots/ip1.png"><img class="ss-image" src="images/screenshots/ip1.png"></a>
+									</li>
+									<li class="ss-list">
+										<a href="images/screenshots/ip2.png"><img class="ss-image" src="images/screenshots/ip2.png"></a>
+									</li>
+									<li class="ss-list">
+										<a href="images/screenshots/ip3.png"><img class="ss-image" src="images/screenshots/ip3.png"></a>
+									</li>
+									<li class="ss-list">
+										<a href="images/screenshots/ip4.png"><img class="ss-image" src="images/screenshots/ip4.png"></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-12">
+								<h3>Reviews</h3>
+							</div>
+							<div class="col-md-12">
+								<div class="quotes">
+									<i class="float-left fa fa-quote-left"></i>
+									<div class="carousel slide" data-ride="carousel">
+										<div class="carousel-inner">
+
+										</div>
+									</div>
+									<i class="float-right fa fa-quote-right"></i>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
